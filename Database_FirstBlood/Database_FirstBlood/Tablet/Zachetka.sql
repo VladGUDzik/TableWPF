@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[Zachetka]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
+	[StudentId] INT NOT NULL FOREIGN KEY(StudentId) REFERENCES Students(Id),
+	[Number] NVARCHAR(50) NOT NULL UNIQUE
+)

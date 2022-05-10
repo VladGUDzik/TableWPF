@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Resalt]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
+	[RecordBookId] INT NOT NULL FOREIGN KEY ([RecordBookId])REFERENCES Zachetka(Id),
+	[Val] INT NOT NULL CHECK (Val>=2 AND Val<=5),
+	--CONSTRAINT 
+)

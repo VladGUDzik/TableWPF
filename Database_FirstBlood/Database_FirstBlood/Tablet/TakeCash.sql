@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[TakeCash]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
+	[StudentId] INT NOT NULL FOREIGN KEY (StudentId) REFERENCES Students(Id),
+	[Cost]MONEY NOT NULL,
+	[DataGive] DATE NOT NULL,
+	[Comment] NVARCHAR(50) NOT NULL
+)

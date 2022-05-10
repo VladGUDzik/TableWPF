@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Rates]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
+	[StudentId] INT NOT NULL 
+	FOREIGN KEY (StudentId) REFERENCES Students(Id),
+	[MakeAt] DATE NOT NULL DEFAULT GETDATE(),
+	[Val] INT NOT NULL CHECK (Val>0 AND Val<=12)
+)
